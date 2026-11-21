@@ -1,0 +1,122 @@
+.aptitude-sections {
+    padding: 6rem 2rem;
+    background: var(--color-background);
+}
+
+.aptitude-sections .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+}
+
+.aptitude-sections .section-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin: 0 0 1rem;
+    letter-spacing: -0.03em;
+}
+
+.section-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.section-card {
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.section-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(124, 58, 237, 0.2);
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.section-card:hover .card-image {
+    transform: scale(1.08);
+}
+
+.card-icon-floating {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-content {
+    padding: 1.4rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.6rem;
+    color: var(--color-text-main);
+}
+
+.card-description {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0 0 1rem;
+}
+
+.card-benefit {
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.9rem;
+}
+
+.benefit-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+.card-benefit p {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .sections-grid {
+        grid-template-columns: 1fr;
+    }
+}
